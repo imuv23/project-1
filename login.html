@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Welcome</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333; /* Dark gray */
+            color: #fff; /* White text */
+        }
+        header {
+            background-color: #ff0000; /* Red */
+            color: #fff; /* White text */
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #ff0000; /* Red */
+            color: #fff; /* White text */
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff; /* White text */
+            padding: 10px 15px;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            background-color: #333; /* Dark gray background on hover */
+            color: #ff0000; /* Red text on hover */
+        }
+        .container {
+            padding: 20px;
+        }
+        .welcome-message {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .content {
+            background-color: #333; /* Dark gray */
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #ff0000; /* Red */
+            color: #fff; /* White text */
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Styles for the sections */
+        .section-box {
+            background-color: #444; /* Slightly lighter gray */
+            color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            display: inline-block;
+            width: 22%; /* Set the width of each box */
+            margin-right: 2%;
+        }
+
+        .section-box:last-child {
+            margin-right: 0; /* Remove margin on the last box */
+        }
+
+        .section-box h3 {
+            margin-top: 0;
+        }
+
+        .section-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Your Dashboard</h1>
+    </header>
+
+    <nav>
+        <a href="login.html">Home</a>
+        <a href="profile.html">Profile</a>
+        <a href="index.html">Logout</a>
+    </nav>
+
+    <div class="container">
+        <div class="welcome-message">
+            
+            <p>Welcome, <strong>UserName</strong>!</p>
+        </div>
+        <div class="content">
+            <h2>Your Dashboard</h2>
+            <p>Here is some important information or content that you can access after logging in.</p>
+            <p>Feel free to explore the features or update your profile settings.</p>
+
+            <!-- Sections in boxes -->
+            <div class="section-container">
+                <div class="section-box">
+                 <button><a href="plans.html">PLANS </a> 
+                    <p>View your fitness plans here.</p> </button>
+                </div>
+                <div class="section-box">
+                  <button> <a href="bmi.html">BMI</a> 
+                    <p>Track your BMI and progress.</p> </button>
+                </div>
+                <div class="section-box">
+                    <button>  <a href="questions.html">QUESTIONS</a>
+                    <p>Ask any questions you may have about your health.</p> </button>
+                </div>
+                <div class="section-box">
+                    <button> <a href="chat.html">Chat with Us</a>
+                    <p>Get in touch with our support team.</p> </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Health Hub All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

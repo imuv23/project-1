@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333; /* Dark gray background */
+            color: #fff; /* White text */
+            margin: 0;
+            padding: 0;
+        }
+
+        .chat-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #444; /* Darker gray for the chat box */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .chat-header {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .chat-box {
+            max-height: 300px;
+            overflow-y: auto;
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            color: #333;
+        }
+
+        .message {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .message.user-message {
+            justify-content: flex-start;
+        }
+
+        .message.bot-message {
+            justify-content: flex-end;
+        }
+
+        .message .message-content {
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #ff0000; /* Red background for bot messages */
+            color: white;
+            max-width: 75%;
+        }
+
+        .message.user-message .message-content {
+            background-color: #333; /* Dark gray background for user messages */
+        }
+
+        .input-area {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .input-area input {
+            width: 80%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #333;
+            background-color: #fff;
+            color: #333;
+        }
+
+        .input-area button {
+            width: 15%;
+            padding: 10px;
+            background-color: #ff0000;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .input-area button:hover {
+            background-color: #e60000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>Chat with Us</h2>
+        </div>
+
+        <div class="chat-box" id="chatBox">
+            <!-- Chat messages will be displayed here -->
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="userMessage" placeholder="Type your message..." />
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to send user message and simulate chatbot response
+        function sendMessage() {
+            const userMessage = document.getElementById("userMessage").value;
+
+            if (userMessage.trim() === "") {
+                alert("Please enter a message.");
+                return;
+            }
+
+            // Display user message in the chat box
+            const chatBox = document.getElementById("chatBox");
+            const userMessageElement = document.createElement("div");
+            userMessageElement.classList.add("message", "user-message");
+            userMessageElement.innerHTML = `<div class="message-content">${userMessage}</div>`;
+            chatBox.appendChild(userMessageElement);
+
+            // Clear input field
+            document.getElementById("userMessage").value = "";
+
+            // Scroll to the bottom of the chat
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+            // Simulate chatbot response after a short delay
+            setTimeout(() => {
+                const botMessage = getBotResponse(userMessage);
+                const botMessageElement = document.createElement("div");
+                botMessageElement.classList.add("message", "bot-message");
+                botMessageElement.innerHTML = `<div class="message-content">${botMessage}</div>`;
+                chatBox.appendChild(botMessageElement);
+
+                // Scroll to the bottom of the chat
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }, 1000); // Simulated response after 1 second
+        }
+
+        // Simple chatbot responses based on user input
+        function getBotResponse(userMessage) {
+            const lowerCaseMessage = userMessage.toLowerCase();
+
+            if (lowerCaseMessage.includes("hello") || lowerCaseMessage.includes("hi")) {
+                return "Hello! How can I assist you today?";
+            } else if (lowerCaseMessage.includes("how are you")) {
+                return "I'm just a bot, but I'm doing great! How can I help you?";
+            } else if (lowerCaseMessage.includes("bmi")) {
+                return "I can help you with BMI calculations! Please share your weight and height.";
+            } else if (lowerCaseMessage.includes("thanks")) {
+                return "You're welcome! Let me know if you need anything else.";
+            } else if (lowerCaseMessage.includes("bye")) {
+                return "Goodbye! Have a great day!";
+            } else {
+                return "I'm sorry, I didn't quite understand that. Can you please rephrase?";
+            }
+        }
+    </script>
+
+</body>
+</html>

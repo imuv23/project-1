@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health and Fitness Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333; /* Changed to dark gray */
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ff0000; /* Red background */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #fff; /* White text */
+        }
+        label {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+            color: #fff; /* White text for labels */
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .question-group {
+            margin-bottom: 20px;
+        }
+        .question-group p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #fff; /* White text */
+        }
+        button {
+            background-color: #ff0000; /* Red button */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff0000; /* Red background on hover */
+        }
+        button a {
+            color: white;
+            text-decoration: none; /* Removing underline from link inside button */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Health and Fitness Questionnaire</h2>
+        <form action="#" method="POST">
+
+            <!-- Fitness and Activity Tracking -->
+            <div class="question-group">
+                <p>Fitness and Activity Tracking:</p>
+                <label for="fitnessGoals">What are your primary fitness goals? (e.g., weight loss, muscle gain)</label>
+                <input type="text" id="fitnessGoals" name="fitnessGoals" required>
+                
+                <label for="exerciseType">What is your preferred type of exercise? (e.g., cardio, strength training)</label>
+                <input type="text" id="exerciseType" name="exerciseType" required>
+                
+                <label for="workoutLocation">Do you prefer working out at home or at the gym?</label>
+                <select id="workoutLocation" name="workoutLocation" required>
+                    <option value="home">Home</option>
+                    <option value="gym">Gym</option>
+                </select>
+
+                <label for="workoutFrequency">How many days a week would you like to work out?</label>
+                <input type="number" id="workoutFrequency" name="workoutFrequency" required>
+                
+                <label for="fitnessLevel">How would you rate your current fitness level?</label>
+                <select id="fitnessLevel" name="fitnessLevel" required>
+                    <option value="sedentary">Sedentary</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+            </div>
+
+            <!-- Submit Button for next step -->
+            <button> <a href="questions3.html">Next</a></button>
+        </form>
+    </div>
+
+</body>
+</html>

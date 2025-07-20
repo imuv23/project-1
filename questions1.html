@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health and Fitness Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333; /* Dark gray background */
+            color: #ff0000; /* Red text */
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ff0000; /* Red background */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333; /* Dark gray text for headings */
+        }
+        label {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+            color: #333; /* Dark gray text for labels */
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .question-group {
+            margin-bottom: 20px;
+        }
+        .question-group p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            color: #333; /* Dark gray text for questions */
+        }
+        button {
+            background-color: #333; /* Dark gray button */
+            color: #ff0000; /* Red text */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff0000; /* Red background on hover */
+            color: #333; /* Dark gray text on hover */
+        }
+        .next-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+        a {
+            color: #ff0000; /* Red link color */
+            text-decoration: none;
+        }
+        a:hover {
+            color: #333; /* Dark gray on hover */
+        }
+    </style>
+</head>
+<body>
+     <div class="container">
+        <h2>Health and Fitness Questionnaire</h2>
+        <form action="#" method="POST">
+ 
+ <!-- Lifestyle and Habits -->
+ <div class="question-group">
+    <p>Lifestyle and Habits:</p>
+    <label for="sleepHours">How many hours of sleep do you get each night?</label>
+    <input type="number" id="sleepHours" name="sleepHours" required>
+    
+    <label for="exerciseFrequency">How often do you exercise each week?</label>
+    <input type="number" id="exerciseFrequency" name="exerciseFrequency" required>
+    
+    <label for="diet">Do you follow a specific diet (e.g., vegetarian, keto)?</label>
+    <input type="text" id="diet" name="diet">
+    
+    <label for="waterIntake">How much water do you drink daily?</label>
+    <input type="number" id="waterIntake" name="waterIntake" required>
+    
+    <label for="mealsPerDay">How many meals do you eat per day?</label>
+    <input type="number" id="mealsPerDay" name="mealsPerDay" required>
+    
+    <label for="smoking">Do you smoke or use tobacco products?</label>
+    <select id="smoking" name="smoking">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select>
+    
+    <label for="alcohol">Do you consume alcohol? If yes, how often?</label>
+    <input type="text" id="alcohol" name="alcohol">
+</div>
+<!-- Instead of placing the <a> inside the button, place it outside the form -->
+<div class="next-link">
+    <a href="questions2.html"><button type="button">Next</button></a>
+</div>
+</form>
+</div>
+
+</body>
+</html>
